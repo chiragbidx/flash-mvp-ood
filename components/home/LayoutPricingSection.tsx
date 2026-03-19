@@ -15,11 +15,11 @@ const { pricing } = homeContent;
 export const LayoutPricingSection = () => {
   return (
     <section id="pricing" className="container py-24 sm:py-32">
-      <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
+      <h2 className="text-lg badge-green-gradient font-semibold text-center mb-2 tracking-wider rounded px-3 py-1">
         {pricing.eyebrow}
       </h2>
 
-      <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
+      <h2 className="text-3xl md:text-4xl text-center font-bold mb-4 text-primary">
         {pricing.heading}
       </h2>
 
@@ -34,19 +34,19 @@ export const LayoutPricingSection = () => {
               key={title}
               className={
                 popular
-                  ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary lg:scale-[1.1]"
-                  : ""
+                  ? "drop-shadow-xl shadow-green-500/10 border-2 border-primary lg:scale-[1.08] bg-primary/5"
+                  : "border border-primary/20"
               }
             >
               <CardHeader>
-                <CardTitle className="pb-2">{title}</CardTitle>
+                <CardTitle className="pb-2 text-primary">{title}</CardTitle>
 
                 <CardDescription className="pb-4">
                   {description}
                 </CardDescription>
 
                 <div>
-                  <span className="text-3xl font-bold">${price}</span>
+                  <span className="text-3xl font-bold text-primary">${price}</span>
                   <span className="text-muted-foreground"> {pricing.priceSuffix}</span>
                 </div>
               </CardHeader>
@@ -54,7 +54,7 @@ export const LayoutPricingSection = () => {
               <CardContent className="flex">
                 <div className="space-y-4">
                   {benefits.map((benefit) => (
-                    <span key={benefit} className="flex">
+                    <span key={benefit} className="flex items-center">
                       <Check className="text-primary mr-2" />
                       <h3>{benefit}</h3>
                     </span>
@@ -65,7 +65,7 @@ export const LayoutPricingSection = () => {
               <CardFooter>
                 <Button
                   variant={popular ? "default" : "secondary"}
-                  className="w-full"
+                  className={popular ? "w-full btn-green-glow shadow" : "w-full border-primary text-primary"}
                 >
                   {buttonText}
                 </Button>
