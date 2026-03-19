@@ -68,11 +68,11 @@ export const LayoutContactSection = () => {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <div className="mb-4">
-            <h2 className="text-lg text-primary mb-2 tracking-wider">
+            <h2 className="text-lg badge-green-gradient font-semibold mb-2 inline-block tracking-wider rounded px-3 py-1">
               {contact.eyebrow}
             </h2>
 
-            <h2 className="text-3xl md:text-4xl font-bold">{contact.heading}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">{contact.heading}</h2>
           </div>
           <p className="mb-8 text-muted-foreground lg:w-5/6">
             {contact.description}
@@ -80,8 +80,8 @@ export const LayoutContactSection = () => {
 
           <div className="flex flex-col gap-4">
             <div>
-              <div className="flex gap-2 mb-1">
-                <Building2 />
+              <div className="flex gap-2 mb-1 items-center">
+                <Building2 className="text-primary" />
                 <div className="font-bold">{contact.info.address.label}</div>
               </div>
 
@@ -89,8 +89,8 @@ export const LayoutContactSection = () => {
             </div>
 
             <div>
-              <div className="flex gap-2 mb-1">
-                <Phone />
+              <div className="flex gap-2 mb-1 items-center">
+                <Phone className="text-primary" />
                 <div className="font-bold">{contact.info.phone.label}</div>
               </div>
 
@@ -98,8 +98,8 @@ export const LayoutContactSection = () => {
             </div>
 
             <div>
-              <div className="flex gap-2 mb-1">
-                <Mail />
+              <div className="flex gap-2 mb-1 items-center">
+                <Mail className="text-primary" />
                 <div className="font-bold">{contact.info.email.label}</div>
               </div>
 
@@ -107,8 +107,8 @@ export const LayoutContactSection = () => {
             </div>
 
             <div>
-              <div className="flex gap-2">
-                <Clock />
+              <div className="flex gap-2 items-center">
+                <Clock className="text-primary" />
                 <div className="font-bold">{contact.info.hours.label}</div>
               </div>
 
@@ -121,7 +121,7 @@ export const LayoutContactSection = () => {
           </div>
         </div>
 
-        <Card className="bg-muted/60 dark:bg-card">
+        <Card className="bg-gradient-to-br from-primary/5 to-background dark:bg-card border-primary/20">
           <CardHeader className="text-primary text-2xl"> </CardHeader>
           <CardContent>
             <Form {...form}>
@@ -137,7 +137,7 @@ export const LayoutContactSection = () => {
                       <FormItem className="w-full">
                         <FormLabel>First Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="Leopoldo" {...field} />
+                          <Input placeholder="Leopoldo" className="input-green" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -150,7 +150,7 @@ export const LayoutContactSection = () => {
                       <FormItem className="w-full">
                         <FormLabel>Last Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="Miranda" {...field} />
+                          <Input placeholder="Miranda" className="input-green" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -169,6 +169,7 @@ export const LayoutContactSection = () => {
                           <Input
                             type="email"
                             placeholder="you@company.com"
+                            className="input-green"
                             {...field}
                           />
                         </FormControl>
@@ -190,7 +191,7 @@ export const LayoutContactSection = () => {
                           defaultValue={field.value}
                         >
                           <FormControl>
-                            <SelectTrigger>
+                            <SelectTrigger className="input-green">
                               <SelectValue placeholder="Select a subject" />
                             </SelectTrigger>
                           </FormControl>
@@ -219,7 +220,7 @@ export const LayoutContactSection = () => {
                           <Textarea
                             rows={5}
                             placeholder="Tell us about your SaaS idea, stage, and timeline..."
-                            className="resize-none"
+                            className="resize-none input-green"
                             {...field}
                           />
                         </FormControl>
@@ -230,7 +231,7 @@ export const LayoutContactSection = () => {
                   />
                 </div>
 
-                <Button className="mt-4">{contact.formSubmitLabel}</Button>
+                <Button className="mt-4 btn-green-glow shadow">{contact.formSubmitLabel}</Button>
               </form>
             </Form>
           </CardContent>
