@@ -35,8 +35,8 @@ export const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
   return (
     <header className="shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
       <Link href="/" className="font-bold text-lg flex items-center">
-        <ChevronsDown className="bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white" />
-        {navbar.brandName}
+        <ChevronsDown className="bg-gradient-to-tr border-secondary from-primary via-emerald-400 to-primary rounded-lg w-9 h-9 mr-2 border text-primary shadow" />
+        <span className="text-primary">{navbar.brandName}</span>
       </Link>
       {/* <!-- Mobile --> */}
       <div className="flex items-center lg:hidden">
@@ -44,7 +44,7 @@ export const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
           <SheetTrigger asChild>
             <Menu
               onClick={() => setIsOpen(!isOpen)}
-              className="cursor-pointer lg:hidden"
+              className="cursor-pointer lg:hidden text-primary"
             />
           </SheetTrigger>
 
@@ -56,8 +56,8 @@ export const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
               <SheetHeader className="mb-4 ml-4">
                 <SheetTitle className="flex items-center">
                   <Link href="/" className="flex items-center">
-                    <ChevronsDown className="bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white" />
-                    {navbar.brandName}
+                    <ChevronsDown className="bg-gradient-to-tr border-secondary from-primary via-emerald-400 to-primary rounded-lg w-9 h-9 mr-2 border text-primary shadow" />
+                    <span className="text-primary">{navbar.brandName}</span>
                   </Link>
                 </SheetTitle>
               </SheetHeader>
@@ -69,7 +69,7 @@ export const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
                     onClick={() => setIsOpen(false)}
                     asChild
                     variant="ghost"
-                    className="justify-start text-base"
+                    className="justify-start text-base text-primary hover:bg-primary/10"
                   >
                     <Link href={href}>{label}</Link>
                   </Button>
@@ -78,7 +78,7 @@ export const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
                   <Button
                     onClick={() => setIsOpen(false)}
                     asChild
-                    className="justify-start text-base"
+                    className="justify-start text-base text-primary bg-primary/10 hover:bg-primary/20"
                   >
                     <Link href="/dashboard">{navbar.dashboardLabel}</Link>
                   </Button>
@@ -88,14 +88,14 @@ export const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
                       onClick={() => setIsOpen(false)}
                       asChild
                       variant="ghost"
-                      className="justify-start text-base"
+                      className="justify-start text-base text-primary hover:bg-primary/10"
                     >
                       <Link href="/auth#signin">{navbar.signInLabel}</Link>
                     </Button>
                     <Button
                       onClick={() => setIsOpen(false)}
                       asChild
-                      className="justify-start text-base"
+                      className="justify-start text-base btn-green-glow"
                     >
                       <Link href="/auth#signup">{navbar.signUpLabel}</Link>
                     </Button>
@@ -105,7 +105,7 @@ export const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
             </div>
 
             <SheetFooter className="flex-col sm:flex-col justify-start items-start">
-              <Separator className="mb-2" />
+              <Separator className="mb-2 border-primary/40" />
 
               <ThemeToggle mode="inline" />
             </SheetFooter>
@@ -117,7 +117,7 @@ export const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
       <NavigationMenu className="hidden lg:block mx-auto">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="bg-card text-base">
+            <NavigationMenuTrigger className="bg-card text-base text-primary hover:bg-primary/10">
               {navbar.featureDropdownLabel}
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -133,9 +133,9 @@ export const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
                   {navbar.features.map(({ title, description }) => (
                     <li
                       key={title}
-                      className="rounded-md p-3 text-sm hover:bg-muted"
+                      className="rounded-md p-3 text-sm hover:bg-primary/5"
                     >
-                      <p className="mb-1 font-semibold leading-none text-foreground">
+                      <p className="mb-1 font-semibold leading-none text-primary">
                         {title}
                       </p>
                       <p className="line-clamp-2 text-muted-foreground">
@@ -151,7 +151,7 @@ export const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
           <NavigationMenuItem>
             {navbar.routes.map(({ href, label }) => (
               <NavigationMenuLink key={href} asChild>
-                <Link href={href} className="text-base px-2">
+                <Link href={href} className="text-base px-2 text-primary hover:text-emerald-400">
                   {label}
                 </Link>
               </NavigationMenuLink>
@@ -162,22 +162,22 @@ export const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
 
       <div className="hidden lg:flex items-center gap-2">
         {isLoggedIn ? (
-          <Button asChild size="sm">
+          <Button asChild size="sm" className="bg-primary/10 text-primary hover:bg-primary/20">
             <Link href="/dashboard">{navbar.dashboardLabel}</Link>
           </Button>
         ) : (
           <>
-            <Button asChild size="sm" variant="ghost">
+            <Button asChild size="sm" variant="ghost" className="text-primary hover:bg-primary/10">
               <Link href="/auth#signin">{navbar.signInLabel}</Link>
             </Button>
-            <Button asChild size="sm">
+            <Button asChild size="sm" className="btn-green-glow">
               <Link href="/auth#signup">{navbar.signUpLabel}</Link>
             </Button>
           </>
         )}
         <ThemeToggle mode="inline" className="w-auto justify-center" />
 
-        <Button asChild size="sm" variant="ghost" aria-label={navbar.githubLink.ariaLabel}>
+        <Button asChild size="sm" variant="ghost" className="text-primary hover:bg-primary/10" aria-label={navbar.githubLink.ariaLabel}>
           <Link
             aria-label={navbar.githubLink.ariaLabel}
             href={navbar.githubLink.href}
