@@ -12,11 +12,11 @@ const { services } = homeContent;
 export const LayoutServicesSection = () => {
   return (
     <section id="services" className="container py-24 sm:py-32">
-      <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
+      <h2 className="text-lg badge-green-gradient font-semibold text-center mb-2 tracking-wider rounded px-3 py-1">
         {services.eyebrow}
       </h2>
 
-      <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
+      <h2 className="text-3xl md:text-4xl text-center font-bold mb-4 text-primary">
         {services.heading}
       </h2>
       <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
@@ -28,16 +28,16 @@ export const LayoutServicesSection = () => {
         {services.items.map(({ title, description, pro }) => (
           <Card
             key={title}
-            className="bg-muted/60 dark:bg-card h-full relative"
+            className="bg-gradient-to-br from-primary/10 to-accent h-full relative border-primary/30 hover-card-green shadow-lg"
           >
             <CardHeader>
-              <CardTitle>{title}</CardTitle>
+              <CardTitle className="text-primary">{title}</CardTitle>
               <CardDescription>{description}</CardDescription>
             </CardHeader>
             <Badge
               data-pro={pro}
               variant="secondary"
-              className="absolute -top-2 -right-3 data-[pro=false]:hidden"
+              className="absolute -top-2 -right-3 data-[pro=false]:hidden border border-primary rounded-full text-primary bg-primary/10"
             >
               PRO
             </Badge>
