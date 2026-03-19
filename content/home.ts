@@ -165,17 +165,17 @@ export const defaultHomeContent: HomeContent = {
   // ── Hero ─────────────────────────────────────────────────────────────────
   hero: {
     badgeInner: "Launch",
-    badgeOuter: "Panda SaaS starter is ready",
-    titleBefore: "Build your next",
-    titleHighlight: "SaaS",
-    titleAfter: "app in days, not weeks",
+    badgeOuter: "MailForge is here",
+    titleBefore: "",
+    titleHighlight: "Effortless Email Marketing for Modern Teams",
+    titleAfter: "",
     subtitle:
-      "Panda gives you authentication, billing-ready patterns, team flows, and polished UI foundations so you can ship faster with confidence.",
-    primaryCta: { label: "Start Building", href: "#pricing" },
+      "MailForge empowers you to craft, send, and track email campaigns that grow your business. Organize your contacts, design professional emails, and analyze results—all with your team.",
+    primaryCta: { label: "Start Sending Emails", href: "/auth#signup" },
     secondaryCta: { label: "Explore features", href: "#features" },
     heroImageLight: "/hero-image-light.jpeg",
     heroImageDark: "/hero-image-dark.jpeg",
-    heroImageAlt: "Panda dashboard preview",
+    heroImageAlt: "MailForge dashboard preview",
   },
 
   // ── Sponsors ─────────────────────────────────────────────────────────────
@@ -194,30 +194,30 @@ export const defaultHomeContent: HomeContent = {
 
   // ── Benefits ─────────────────────────────────────────────────────────────
   benefits: {
-    eyebrow: "Why Panda",
-    heading: "A practical SaaS app builder starter",
+    eyebrow: "Why MailForge",
+    heading: "A collaborative platform for teams",
     description:
-      "Built for teams that want production-ready foundations with room to customize, not a rigid template you outgrow in a week.",
+      "MailForge is built for businesses that want an all-in-one workspace for email campaign design, contact management, and analytics.",
     items: [
       {
         icon: "Blocks",
-        title: "Ship With Confidence",
-        description: "Start from proven architecture and avoid redoing auth, layout, and deployment setup.",
+        title: "Work Together",
+        description: "Real-time collaboration lets your whole team build campaigns and manage contacts easily.",
       },
       {
         icon: "LineChart",
-        title: "Faster Time To Revenue",
-        description: "Focus on product validation while the starter handles the repetitive engineering basics.",
+        title: "Drive Results",
+        description: "Measure what matters and optimize your outreach with simple reports.",
       },
       {
-        icon: "Wallet",
-        title: "Lower Build Cost",
-        description: "Reusable components and patterns reduce rework and keep your team moving efficiently.",
+        icon: "Mail",
+        title: "Engage Your Audience",
+        description: "Target, personalize, and deliver professional campaigns that perform.",
       },
       {
         icon: "Sparkle",
-        title: "Cleaner UX By Default",
-        description: "Responsive sections, dark mode, and polished UI primitives create a premium first impression.",
+        title: "Premium Experience",
+        description: "Modern UI and smart workflows enable fast, effective campaign building.",
       },
     ],
   },
@@ -225,131 +225,58 @@ export const defaultHomeContent: HomeContent = {
   // ── Features ─────────────────────────────────────────────────────────────
   features: {
     eyebrow: "Features",
-    heading: "What you get out of the box",
+    heading: "What makes MailForge powerful?",
     subtitle:
-      "Panda combines developer speed and production-grade UX so you can spend your time shipping features instead of rebuilding starter infrastructure.",
+      "MailForge combines collaboration, automation, analytics, and intuitive tooling for growing businesses.",
     items: [
-      { icon: "TabletSmartphone", title: "Responsive By Default", description: "Every section is optimized for mobile and desktop without extra layout work." },
-      { icon: "BadgeCheck", title: "Battle-Tested Patterns", description: "Uses dependable UI and architecture conventions teams can maintain long-term." },
-      { icon: "Goal", title: "Product-Focused Structure", description: "Clear section hierarchy designed to communicate value and drive activation." },
-      { icon: "PictureInPicture", title: "Polished Visual Foundation", description: "Modern cards, spacing, and motion cues that are easy to extend for your brand." },
-      { icon: "MousePointerClick", title: "Conversion-Ready CTA Flow", description: "Strategic calls-to-action and section order help users move to signup quickly." },
-      { icon: "Newspaper", title: "Documentation-Friendly", description: "Readable code and section boundaries make onboarding new contributors easier." },
+      { icon: "Users", title: "Collaborative Campaigns", description: "Work together to plan, design, and launch email campaigns from a unified dashboard." },
+      { icon: "AddressBook", title: "Contact Management", description: "Easily import, organize, and segment your audience for targeted messaging." },
+      { icon: "PieChart", title: "Simple Analytics", description: "Track opens, clicks, and key metrics to optimize your campaigns." },
     ],
   },
 
   // ── Services ─────────────────────────────────────────────────────────────
   services: {
     eyebrow: "Services",
-    heading: "Core starter capabilities",
+    heading: "Everything you need to succeed",
     subtitle:
-      "A pragmatic baseline for SaaS products that need to move quickly without sacrificing quality.",
+      "Go from concept to launch with tools for importing contacts, building campaigns, and tracking performance.",
     items: [
-      { title: "Authentication Foundation", description: "Ready-to-extend auth scaffolding for email, OAuth, and organization-based access.", pro: false },
-      { title: "Billing-Ready Structure", description: "Plan models and upgrade flow patterns prepared for Stripe or your payment provider.", pro: false },
-      { title: "Developer Experience", description: "TypeScript, linting, and component primitives configured for team velocity.", pro: false },
-      { title: "Production Hardening", description: "Security-minded defaults, reusable UI states, and maintainable section architecture.", pro: true },
+      { title: "Campaign Creation", description: "Design, schedule, and send beautifully branded email campaigns.", pro: false },
+      { title: "List Management", description: "Import, segment, and grow your contact lists.", pro: false },
+      { title: "Team Collaboration", description: "Multiple users, role-based control, and shared dashboards.", pro: false },
+      { title: "Campaign Analytics", description: "See what's working—opens, clicks, and conversions.", pro: true },
     ],
   },
 
   // ── Testimonials ─────────────────────────────────────────────────────────
   testimonials: {
     eyebrow: "Testimonials",
-    heading: "Teams shipping with Panda",
+    heading: "Teams growing with MailForge",
     reviews: [
-      { image: "/demo-img.jpg", name: "Aarav Shah", role: "Founder, FinchFlow", comment: "Panda saved us weeks of setup. We launched our first paying plan in less than a sprint.", rating: 5.0 },
-      { image: "/demo-img.jpg", name: "Maya Patel", role: "Product Lead, OrbitDesk", comment: "The section structure and component quality made it easy to ship a polished onboarding flow quickly.", rating: 4.8 },
-      { image: "/demo-img.jpg", name: "Nikhil Rao", role: "CTO, TeamForge", comment: "We replaced our old starter with Panda and reduced front-end rework dramatically.", rating: 4.9 },
-      { image: "/demo-img.jpg", name: "Emma Brooks", role: "Head of Growth, Nimbus", comment: "The default layout is conversion-friendly and easy to adapt to our brand.", rating: 5.0 },
-      { image: "/demo-img.jpg", name: "Daniel Kim", role: "Engineering Manager, PulseOps", comment: "Great developer ergonomics. New engineers onboarded fast and started shipping immediately.", rating: 5.0 },
-      { image: "/demo-img.jpg", name: "Sofia Green", role: "Founder, LaunchPad AI", comment: "Exactly what we needed for an MVP: clean code, strong UI, and a sensible section flow.", rating: 4.9 },
+      { image: "/demo-img.jpg", name: "Chris Park", role: "Marketing Lead, CloudSync", comment: "MailForge helped us streamline our campaigns – team members love collaborating on lists and analytics.", rating: 5.0 },
+      { image: "/demo-img.jpg", name: "Leslie Wu", role: "Growth Manager, NextFlex", comment: "Easy enough for our new hires, powerful enough for our data team. Analytics made a real difference.", rating: 4.8 },
+      { image: "/demo-img.jpg", name: "Juan Lopez", role: "Founder, LaunchSpark", comment: "We switched from manual email sending to MailForge and instantly improved engagement.", rating: 4.9 },
+      { image: "/demo-img.jpg", name: "Naomi Gold", role: "Owner, StartUp Studio", comment: "Onboarding was simple and the contact import worked perfectly.", rating: 5.0 },
+      { image: "/demo-img.jpg", name: "Aidan Rose", role: "CMO, VentureGrow", comment: "Contact management and team workflow saved hours each week.", rating: 5.0 },
+      { image: "/demo-img.jpg", name: "Sarah Lind", role: "Content Strategist, CivicMail", comment: "Launching professional campaigns used to take days, now it takes hours.", rating: 4.9 },
     ],
   },
 
   // ── Team ─────────────────────────────────────────────────────────────────
   team: {
     eyebrow: "Team",
-    heading: "Meet the Panda team",
+    heading: "Meet the MailForge team",
     members: [
+      // Placeholder, can customize later
       {
         imageUrl: "/team1.jpg",
-        firstName: "Leo",
-        lastName: "Miranda",
-        positions: ["Lead Engineer", "Starter Architecture"],
+        firstName: "Adan",
+        lastName: "Asim",
+        positions: ["Founder", "Product Lead"],
         socialNetworks: [
           { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
           { name: "Github", url: "https://github.com/leoMirandaa" },
-          { name: "X", url: "https://x.com/leo_mirand4" },
-        ],
-      },
-      {
-        imageUrl: "/team2.jpg",
-        firstName: "Elizabeth",
-        lastName: "Moore",
-        positions: ["Product Designer"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "X", url: "https://x.com/leo_mirand4" },
-        ],
-      },
-      {
-        imageUrl: "/team3.jpg",
-        firstName: "David",
-        lastName: "Diaz",
-        positions: ["Platform Engineer", "AI Integrations"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "Github", url: "https://github.com/leoMirandaa" },
-        ],
-      },
-      {
-        imageUrl: "/team1.jpg",
-        firstName: "Sarah",
-        lastName: "Robinson",
-        positions: ["Cloud Engineer", "Kubernetes"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "Github", url: "https://github.com/leoMirandaa" },
-          { name: "X", url: "https://x.com/leo_mirand4" },
-        ],
-      },
-      {
-        imageUrl: "/team2.jpg",
-        firstName: "Michael",
-        lastName: "Holland",
-        positions: ["DevOps Engineer", "CI/CD"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-        ],
-      },
-      {
-        imageUrl: "/team3.jpg",
-        firstName: "Zoe",
-        lastName: "Garcia",
-        positions: ["Frontend Engineer", "Design Systems"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "Github", url: "https://github.com/leoMirandaa" },
-        ],
-      },
-      {
-        imageUrl: "/team1.jpg",
-        firstName: "Evan",
-        lastName: "James",
-        positions: ["Backend Engineer"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "Github", url: "https://github.com/leoMirandaa" },
-          { name: "X", url: "https://x.com/leo_mirand4" },
-        ],
-      },
-      {
-        imageUrl: "/team2.jpg",
-        firstName: "Pam",
-        lastName: "Taylor",
-        positions: ["Fullstack Engineer", "Product UX"],
-        socialNetworks: [
-          { name: "X", url: "https://x.com/leo_mirand4" },
         ],
       },
     ],
@@ -358,33 +285,33 @@ export const defaultHomeContent: HomeContent = {
   // ── Pricing ──────────────────────────────────────────────────────────────
   pricing: {
     eyebrow: "Pricing",
-    heading: "Pricing for every stage",
-    subtitle: "Start lean, then scale to enterprise-grade workflows as your product grows.",
+    heading: "Flexible pricing for every business",
+    subtitle: "Start free, scale as your campaigns and team grow.",
     priceSuffix: "/month",
     plans: [
       {
         title: "Starter",
         popular: false,
         price: 0,
-        description: "Ideal for prototypes and small internal tools.",
+        description: "Perfect for small businesses experimenting with email campaigns.",
         buttonText: "Start for free",
-        benefits: ["Up to 3 teammates", "Basic auth patterns", "Core landing sections", "Community support", "Deploy-ready setup"],
+        benefits: ["Up to 3 teammates", "1000 emails/mo", "Core features", "Basic analytics"],
       },
       {
         title: "Growth",
         popular: true,
         price: 49,
-        description: "Best for product teams shipping customer-facing SaaS.",
+        description: "Best for growing businesses and small teams.",
         buttonText: "Start trial",
-        benefits: ["Unlimited teammates", "Advanced section set", "Billing-ready models", "Priority support", "Team workflows"],
+        benefits: ["Unlimited teammates", "10,000 emails/mo", "Automation", "Advanced analytics", "Priority support"],
       },
       {
         title: "Enterprise",
         popular: false,
         price: 199,
-        description: "For teams requiring compliance, support SLAs, and custom rollout.",
+        description: "For large organizations with custom needs and compliance.",
         buttonText: "Contact sales",
-        benefits: ["Security review support", "SSO/SAML integration path", "Dedicated onboarding", "Phone and email support", "Architecture advisory"],
+        benefits: ["Unlimited usage", "Custom onboarding", "Dedicated support", "Integration services"],
       },
     ],
   },
@@ -392,48 +319,46 @@ export const defaultHomeContent: HomeContent = {
   // ── Contact ──────────────────────────────────────────────────────────────
   contact: {
     eyebrow: "Contact",
-    heading: "Talk to the Panda team",
+    heading: "Talk to MailForge",
     description:
-      "Need help customizing the starter, planning architecture, or accelerating launch? Share your goals and timeline.",
-    mailtoAddress: "hello@panda.dev",
+      "Questions? Need a product demo? Want help migrating from another tool? We’re here for you.",
+    mailtoAddress: "adan@bidx.ai",
     info: {
-      address: { label: "Find us", value: "Remote-first • San Francisco, CA" },
-      phone: { label: "Call us", value: "+1 (415) 555-0199" },
-      email: { label: "Email us", value: "hello@panda.dev" },
-      hours: { label: "Visit us", value: ["Monday - Friday", "9AM - 6PM PT"] },
+      address: { label: "Find us", value: "Remote-first • Worldwide" },
+      phone: { label: "Call us", value: "" },
+      email: { label: "Email us", value: "adan@bidx.ai" },
+      hours: { label: "Visit us", value: ["Monday - Friday", "9AM - 6PM UTC"] },
     },
-    formSubjects: ["Starter Demo", "Architecture Review", "Design System", "Billing Integration", "Enterprise Plan"],
-    formSubmitLabel: "Send inquiry",
+    formSubjects: ["Platform Demo", "Contact Import Help", "Team Collaboration", "Billing Question"],
+    formSubmitLabel: "Send message",
   },
 
   // ── FAQ ──────────────────────────────────────────────────────────────────
   faq: {
     eyebrow: "FAQ",
-    heading: "Common Questions",
+    heading: "Your questions about MailForge",
     items: [
-      { question: "Is Panda free to start with?", answer: "Yes. You can start with the core template and customize it for your product." },
-      { question: "Can I use this for a production SaaS app?", answer: "Yes. The starter is designed for production-minded teams with scalable structure and reusable UI patterns." },
-      { question: "Does it support dark mode and responsive design?", answer: "Yes. The template includes theme support and responsive layouts across major sections." },
-      { question: "Can I plug in my own auth and billing provider?", answer: "Yes. The structure is provider-agnostic and easy to adapt for your stack." },
-      { question: "How quickly can I launch with Panda?", answer: "Most teams can ship an MVP in days by reusing existing sections and starter patterns." },
+      { question: "Is MailForge free to start?", answer: "Yes. You can start with up to 3 teammates and 1000 emails a month." },
+      { question: "Can I use MailForge with my team?", answer: "Absolutely. Collaboration is at the heart of our platform." },
+      { question: "Does MailForge show analytics?", answer: "Track opens, clicks, and key audience metrics for every campaign." },
+      { question: "Can I import my existing contacts?", answer: "Yes. Easily import CSV or from other platforms." },
+      { question: "How quickly can I launch my first campaign?", answer: "Create and launch a campaign in minutes with guided flows." },
     ],
   },
 
   // ── Footer ───────────────────────────────────────────────────────────────
   footer: {
-    brandName: "Panda",
+    brandName: "MailForge",
     columns: [
       {
         heading: "Contact",
         links: [
-          { label: "hello@panda.dev", href: "mailto:hello@panda.dev" },
+          { label: "adan@bidx.ai", href: "mailto:adan@bidx.ai" },
           { label: "Github", href: "#" },
-          { label: "Twitter", href: "https://x.com" },
-          { label: "Discord", href: "https://discord.com" },
         ],
       },
       {
-        heading: "Product",
+        heading: "Platform",
         links: [
           { label: "Features", href: "#features" },
           { label: "Pricing", href: "#pricing" },
@@ -445,49 +370,45 @@ export const defaultHomeContent: HomeContent = {
         links: [
           { label: "Contact Us", href: "#contact" },
           { label: "FAQ", href: "#faq" },
-          { label: "Docs", href: "https://nextjs.org/docs" },
         ],
       },
       {
         heading: "Socials",
         links: [
           { label: "GitHub", href: "https://github.com" },
-          { label: "Discord", href: "https://discord.com" },
           { label: "X", href: "https://x.com" },
         ],
       },
     ],
-    copyright: "\u00a9 2026 Panda SaaS App Builder Starter.",
+    copyright: "\u00a9 2026 MailForge.",
     attribution: { label: "Built on Next.js", href: "https://nextjs.org" },
   },
 
   // ── Navbar ───────────────────────────────────────────────────────────────
   navbar: {
-    brandName: "Panda",
+    brandName: "MailForge",
     routes: [
+      { href: "/#features", label: "Features" },
       { href: "/#testimonials", label: "Testimonials" },
-      { href: "/#team", label: "Team" },
       { href: "/#contact", label: "Contact" },
       { href: "/#faq", label: "FAQ" },
     ],
     featureDropdownLabel: "Features",
-    featureImage: { src: "/demo-img.jpg", alt: "Panda preview" },
+    featureImage: { src: "/demo-img.jpg", alt: "MailForge preview" },
     features: [
-      { title: "Auth, Billing, Teams", description: "Production-ready flows for sign-in, subscriptions, and organizations." },
-      { title: "UI + Design System", description: "Shadcn-based components with consistent theming and dark mode support." },
-      { title: "Deploy Fast", description: "Sane defaults for Next.js, TypeScript, and Vercel-first deployment." },
+      { title: "Collaborative Campaigns", description: "Work together to plan, design, and launch from one dashboard." },
+      { title: "Contact Management", description: "Segment and grow your audience for better results." },
+      { title: "Simple Analytics", description: "See opens, clicks, and optimize with clear data." },
     ],
-    signInLabel: "Sign in",
-    signUpLabel: "Sign up",
+    signInLabel: "Sign In",
+    signUpLabel: "Create Account",
     dashboardLabel: "Dashboard",
-    githubLink: { href: "https://nextjs.org/docs", ariaLabel: "View on GitHub" },
+    githubLink: { href: "https://github.com", ariaLabel: "View on GitHub" },
   },
 };
 
 export const homeContent: HomeContent = defaultHomeContent;
 
-// Keep this function export for backward compatibility with older imports.
-// Primary consumers should import `homeContent` directly.
 export function getHomeContent(): HomeContent {
   return homeContent;
 }
