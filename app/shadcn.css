@@ -24,6 +24,30 @@
   }
 }
 
+/* Green glow button (new) */
+.btn-green-glow {
+  background: linear-gradient(90deg, oklch(0.68 0.21 135) 0%, oklch(0.61 0.23 135) 100%);
+  box-shadow: 0 0 18px 0 oklch(0.68 0.21 135 / 20%);
+  color: var(--primary-foreground);
+}
+
+/* Green feature pill gradient (for badges/eyebrows) */
+.badge-green-gradient {
+  background: linear-gradient(90deg, oklch(0.68 0.21 135) 50%, oklch(0.45 0.17 135) 100%);
+  color: var(--primary-foreground);
+}
+
+/* Extra accent for cards and nav on hover */
+.hover-card-green:hover {
+  background: oklch(0.85 0.15 135);
+}
+
+/* Demo: subtle green border focus */
+.input-green:focus-visible {
+  border-color: oklch(0.68 0.21 135);
+  box-shadow: 0 0 0 1.5px oklch(0.68 0.21 135);
+}
+
 @custom-variant data-open {
   &:where([data-state="open"]),
   &:where([data-open]:not([data-open="false"])) {
