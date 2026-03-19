@@ -59,10 +59,10 @@ function NavLink({
   return (
     <Link
       href={href}
-      className={`flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm transition-colors ${
+      className={`flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm transition-all font-medium ${
         isActive
-          ? "bg-primary/10 text-primary font-medium"
-          : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+          ? "bg-primary/20 text-primary shadow border-l-4 border-primary"
+          : "text-muted-foreground hover:bg-primary/10 hover:text-primary"
       }`}
     >
       <Icon className="size-4" />
@@ -88,7 +88,7 @@ function NavSection({
 
   return (
     <Collapsible defaultOpen={defaultOpen}>
-      <CollapsibleTrigger className="group flex w-full items-center justify-between px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground/70 hover:text-muted-foreground transition-colors">
+      <CollapsibleTrigger className="group flex w-full items-center justify-between px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary/60 hover:text-primary transition-colors">
         {title}
         <ChevronDown className="size-3.5 transition-transform group-data-[state=closed]:-rotate-90" />
       </CollapsibleTrigger>
