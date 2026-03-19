@@ -39,17 +39,19 @@ export default async function DashboardLayout({
     `${user.firstName[0] ?? ""}${user.lastName[0] ?? ""}`.toUpperCase() || "U";
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-primary/5 to-background">
       <div className="flex min-h-screen">
         {/* Desktop sidebar */}
-        <aside className="hidden w-[264px] shrink-0 border-r bg-card/50 md:flex md:flex-col">
+        <aside className="hidden w-[264px] shrink-0 border-r border-primary/30 bg-card/60 md:flex md:flex-col shadow-lg">
           <div className="p-5">
             <div className="flex items-center gap-2.5">
-              <div className="grid size-8 place-items-center rounded-lg bg-foreground text-background text-sm font-bold shadow-sm">
+              <div className="grid size-8 place-items-center rounded-lg bg-primary text-background text-sm font-bold shadow-sm">
                 M
               </div>
               {/* Dashboard Text Logo */}
-              <span className="font-semibold tracking-tight">MailForge</span>
+              <span className="font-semibold tracking-tight text-primary">
+                MailForge
+              </span>
             </div>
           </div>
 
@@ -60,7 +62,7 @@ export default async function DashboardLayout({
 
         {/* Main content area */}
         <div className="flex flex-1 flex-col">
-          <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 sm:px-6">
+          <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b border-primary/20 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 sm:px-6">
             <MobileNav
               fullName={fullName}
               email={user.email}
